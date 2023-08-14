@@ -1,0 +1,3 @@
+/home/xmo0/git-repos/cmake-3.27.2-tutorial-source/Step01_Build/CMakeFiles/Tutorial.dir
+/home/xmo0/git-repos/cmake-3.27.2-tutorial-source/Step01_Build/CMakeFiles/edit_cache.dir
+/home/xmo0/git-repos/cmake-3.27.2-tutorial-source/Step01_Build/CMakeFiles/rebuild_cache.dir
