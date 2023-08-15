@@ -1,2 +1,9 @@
 // the configured options and settings for Tutorial
 // TODO 10: Define Tutorial_VERSION_MAJOR and Tutorial_VERSION_MINOR
+#cmakedefine Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@ 
+#cmakedefine Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@
+
+// 这里也可以直接使用 #define
+// 但是我倾向于上面的用法，因为它表示了这个宏定义是由cmake负责替换的
+// #define Tutorial_VERSION_MAJOR @Tutorial_VERSION_MAJOR@ 
+// #define Tutorial_VERSION_MINOR @Tutorial_VERSION_MINOR@

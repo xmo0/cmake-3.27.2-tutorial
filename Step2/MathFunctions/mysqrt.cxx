@@ -18,8 +18,9 @@ double mysqrt(double x)
     if (result <= 0) {
       result = 0.1;
     }
-    double delta = x - (result * result);
-    result = result + 0.5 * delta / result;
+    // double delta = x - (result * result);
+    // result = result + 0.5 * delta / result;
+    result = 0.5 * (result + x / result);
     std::cout << "Computing sqrt of " << x << " to be " << result << std::endl;
   }
   return result;
