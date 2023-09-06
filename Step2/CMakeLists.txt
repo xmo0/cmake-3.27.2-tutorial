@@ -29,3 +29,8 @@ target_include_directories(Tutorial PUBLIC ${PROJECT_SOURCE_DIR}/MathFunctions)
 target_include_directories(Tutorial PUBLIC
                            "${PROJECT_BINARY_DIR}"
                            )
+# 也可以把上下两个合起来写
+# target_include_directories(Tutorial PUBLIC
+#                            "${PROJECT_BINARY_DIR}"
+#                            "${PROJECT_SOURCE_DIR}/MathFunctions"
+#                           )

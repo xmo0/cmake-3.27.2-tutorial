@@ -12,7 +12,9 @@ message(STATUS "USE_MYMATH: " ${USE_MYMATH})
 # TODO 8: If USE_MYMATH is ON, use target_compile_definitions to pass
 # USE_MYMATH as a precompiled definition to our source files
 if(USE_MYMATH)
+    # 此处的 PUBLIC PRIVATE 实际影响的是顶层源文件里面是否存在 USE_MYMATH 宏定义
     target_compile_definitions(MathFunctions PUBLIC USE_MYMATH)
+    # target_compile_definitions(MathFunctions PRIVATE USE_MYMATH)
 endif()
 
 # TODO 12: When USE_MYMATH is ON, add a library for SqrtLibrary with

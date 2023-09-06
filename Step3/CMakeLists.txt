@@ -29,11 +29,9 @@ add_subdirectory(MathFunctions)
 add_executable(Tutorial tutorial.cxx)
 
 # TODO 5: Link Tutorial to tutorial_compiler_flags
-
-target_link_libraries(Tutorial PUBLIC MathFunctions tutorial_compiler_flags) 
+target_link_libraries(Tutorial PUBLIC MathFunctions) 
 
 # TODO 3: Remove use of EXTRA_INCLUDES
-
 # add the binary tree to the search path for include files
 # so that we will find TutorialConfig.h
 target_include_directories(Tutorial PUBLIC

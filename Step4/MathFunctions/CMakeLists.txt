@@ -9,6 +9,8 @@ target_include_directories(MathFunctions
 
 # should we use our own math functions
 option(USE_MYMATH "Use tutorial provided math implementation" ON)
+message(STATUS "USE_MYMATH: " ${USE_MYMATH})
+
 if (USE_MYMATH)
   target_compile_definitions(MathFunctions PRIVATE "USE_MYMATH")
 

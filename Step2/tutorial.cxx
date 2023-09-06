@@ -17,6 +17,12 @@ int main(int argc, char* argv[])
     return 1;
   }
 
+  #ifdef USE_MYMATH
+    std::cout << "USE_MYMATH defined\n";
+  #else
+    std::cout << "USE_MYMATH not defined\n";
+  #endif
+
   // convert input to double
   const double inputValue = std::stod(argv[1]);
 
