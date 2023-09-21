@@ -1,6 +1,20 @@
 # TODO 1: Update the minimum required version to 3.15
 cmake_minimum_required(VERSION 3.15)
 
+# ---------------------- Generator expressions test ----------------------
+# "$<0:aaa>_$<1:bbb>"             _bbb
+# "$<IF:1,aaa,bbb>"               aaa
+# "$<IF:0,aaa,bbb>"               bbb
+# "$<IF:0,aaa,>"                  
+# "$<IF:0,aaa>"                   error
+
+# cmake --build . --target genexdebug
+add_custom_target(genexdebug COMMAND ${CMAKE_COMMAND} -E echo "$<IF:0,aaa,>")
+
+# add_custom_target(genexdebug COMMAND ${CMAKE_COMMAND} -E echo "$<BOOL:0>")
+
+# ---------------------- Generator expressions test end ------------------
+
 # set the project name and version
 project(Tutorial VERSION 1.0)
 
