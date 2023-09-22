@@ -15,6 +15,10 @@ int main(int argc, char* argv[])
     std::cout << "Usage: " << argv[0] << " number" << std::endl;
     return 1;
   }
+  
+  // 故意留一处warning
+  // 通过修改CMakeLists.txt里面关于警告的内容，来观察修改效果
+  int iii; // unused variable
 
   // convert input to double
   const double inputValue = std::stod(argv[1]);
